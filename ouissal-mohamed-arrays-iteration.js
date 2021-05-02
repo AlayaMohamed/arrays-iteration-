@@ -263,7 +263,96 @@ function totallengths(array){
         return result
     }
 
-
+    / advanced
+    //Q22
+    // answer
+    function filterEvenWords(array){
+        var arrayFinal=[ ]
+      var i = 0
+       while ( i< array.length ){
+           if (((array[i].length)%2)===0) {
+           arrayFinal.push(array[i])
+           }
+           i++
+       } return arrayFinal;
+   }
+  //Q23
+  // answer
+  function poplastElement(array){
+      for ( var i = 0 ; i <array.length ; i++){
+      array[i].pop();
+      }
+      return array
+  }
+   // Q24
+   // answer
+   function pushlastElement(array,element){
+      for ( var i = 0 ; i <array.length ; i++){
+      array[i].push(element);
+      }
+      return array
+  }
+  // Q25
+   // answer
+   function help(array) {
+  var result = 0
+  for ( i=0 ; i<array.length ; i++) {
+   result = result + array[i]
+  }
+  return result
+  }
+  function sumArrays(array){
+      var sum = 0
+      var i =0
+      while (i<array.length){
+  sum = sum + help(array[i])
+  i++
+      }
+  return sum
+  }
+  // Q26
+  // answer
+  function multiplyBysmallest(array){
+  var min = array[0]
+   var i = 1
+   while (i<array.length){
+   if ( array[i]<min){
+       min= array[i]
+  }
+   else min=min
+  i++
+  }
+  var j= 0
+  while (j<array.length){
+  array[j]= array[j]*min
+  j++
+  }
+  return array
+  }
+  // Q27
+   // answer
+  function joinArray(array){
+  var resultconcat =[ ]
+  for (i=0 ; i<array.length; i++){
+  resultconcat= [ ].concat(resultconcat,array[i])
+  }
+  return resultconcat
+  }
+  //Q28
+  // answer
+  function sumOddEven (array){
+  var odd= 0
+  var even = 0
+  while (i< array.length){
+  if ( (array[i]%2)===0){
+      even= even + array[i]
+  }	
+  else odd= odd+array[i]
+    i++
+  }
+  var resultarray= [even,odd]
+  return resultarray
+  }
 
 
 
