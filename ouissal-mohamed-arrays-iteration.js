@@ -98,7 +98,7 @@ while (i<array.length){
 }
 return array
    }
-   
+
 //Q11
    // answer
    function isArray(array){
@@ -106,3 +106,172 @@ return array
 return true }
 else return false ;
    	}
+
+//intermediate
+//Q12
+//Answer
+
+function min(array){
+    var resultmin=array[0]
+    var i=1
+    while (i<(array.length)){
+        if ((array[i])<resultmin){
+            resultmin=array[i]
+        }
+    else resultmin=resultmin
+i++
+    }
+return resultmin;   
+}
+
+//Q13
+//Answer
+function max(array){
+    var resultmax= array[array.length-1]
+    var i=array.length-2
+    while(i>=0){
+        if (resultmax>(array[i])){
+            resultmax=resultmax
+        }
+        else resultmax=array[i]
+    i--
+    }
+    return resultmax;
+    }
+
+//Q14
+//answer
+function shortestString(array){
+    var resultmin=array[0]
+    var i=1
+    while (i<(array.length)){
+        if ((array[i].length)<(resultmin.length)){
+                resultmin=array[i]
+        }
+        else resultmin=resultmin
+    i++
+    }
+return resultmin.length;   
+}
+
+//Q15
+//answer
+function longeststring(array){
+var resultmax=array[0]
+var i = 1
+while (i < array.length){
+    if (array[i].length> resultmax.length){
+            resultmax= array[i]
+    }
+    
+    else result= resultmax 
+    
+    i++
+}
+    
+return resultmax.length
+}
+
+//Q16
+//Answer
+function minMax(array){
+    var min=array[0]
+    var max=array[0]
+    
+    for (var i=1; i<array.length;i++){
+        if ((array[i])<min){
+            min=array[i]
+        }
+    else min=min
+    }
+    
+    for (var i=1; i<array.length;i++){
+        if ((array[i])>max){
+            max=array[i]
+        }
+    else max=max
+    }
+    var result=[min,max]
+    return result;
+    }
+
+//Q17
+//answer
+function shortestLongest(array){
+    var min=array[0]
+    var max=array[0]
+    
+    for (var i=1; i<array.length;i++){
+        if ((array[i].length)<min.length){
+            min=array[i]
+        }
+    else min=min
+    }
+    
+    for (var i=1; i<array.length;i++){
+        if ((array[i].length)>max.length){
+            max=array[i]
+        }
+    else max=max
+    }
+    var result=[min,max]
+    return result;
+    }
+
+//Q18
+//Answer
+function multiplyBy(array,number){
+    var i= 0
+    while (i<array.length){
+        array[i]=array[i]*number
+        i++
+    }
+    return array
+}
+
+//Q19
+//Answer
+function multiplyByindex(array){
+    var i= 0
+    while (i<array.length){
+        array[i]=array[i]*i
+        i++
+    }
+    return array
+}
+
+//Q20
+//Answer
+function lengths(array){
+    var i= 0
+    while (i<array.length){
+        array[i]=array[i].length
+        i++
+    }
+    return array
+}
+
+//Q21
+//Answer
+function totallengths(array){
+    var result=0
+        var i= 0
+        while (i<array.length){
+            result=result+array[i].length
+    i++
+        }
+        return result
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
