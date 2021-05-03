@@ -263,7 +263,7 @@ function totallengths(array){
         return result
     }
 
-    / advanced
+    // advanced
     //Q22
     // answer
     function filterEvenWords(array){
@@ -345,18 +345,65 @@ function totallengths(array){
   var even = 0
   while (i< array.length){
   if ( (array[i]%2)===0){
-      even= even + array[i]
+      even= even + array[i];
+      odd=odd
   }	
-  else odd= odd+array[i]
+  else odd= odd+array[i];
+       even=even
     i++
   }
-  var resultarray= [even,odd]
+  var resultarray= [odd,even]
   return resultarray
   }
 
 
+//Q29
+//answer
+function shortestOfMixed(array) {
+    var result=['']
+    var i=0
+    while (i<array.length) {
+        if ((typeof array[i])==='string'){
+              result.push(array[i])
+        }
+     i++   
+    }
+    var shortest =''
+    var tempo=result[0]
+    var j=0
+    while (j<result.length) {
+        if ((result[j].length)<(tempo.length)){
+            tempo=result[j]
+        }
+       j++ 
+    }
+    shortest=tempo
+    return shortest
+}
 
-
+//Q30
+//Answer
+function smallestOfMixed(array) {
+    var result=[]
+    var i=0
+    while (i<array.length) {
+        if ((typeof array[i])==='number'){
+              result.push(array[i])
+        }
+     i++   
+    }
+    var smallest =0
+    var tempo=result[0]
+    var j=1
+    while (j<result.length) {
+        if ((result[j])<(tempo)){
+            tempo=result[j]
+        }
+       j++ 
+    }
+    smallest=tempo
+    return smallest
+}
 
 
 
