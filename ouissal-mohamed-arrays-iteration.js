@@ -343,7 +343,7 @@ function totallengths(array){
   function sumOddEven (array){
   var odd= 0
   var even = 0
-  while (i< array.length){
+  while (i< array.length){                 
   if ( (array[i]%2)===0){
       even= even + array[i];
       odd=odd
@@ -359,55 +359,41 @@ function totallengths(array){
 
 //Q29
 //answer
-function shortestOfMixed(array) {
-    var result=['']
-    var i=0
-    while (i<array.length) {
-        if ((typeof array[i])==='string'){
-              result.push(array[i])
-        }
-     i++   
+function shortestOfMixed(array){
+    var onlyString=[]
+    for(var i=0;i<array.length; i++){
+        if (typeof array[i]==='string'){
+            onlyString.push(array[i])
+        }   
     }
-    var shortest =''
-    var tempo=result[0]
-    var j=0
-    while (j<result.length) {
-        if ((result[j].length)<(tempo.length)){
-            tempo=result[j]
+    if ((onlyString.length)===0){ return ''}
+    
+    var min=onlyString[0]
+    for(var j=1;j<onlyString.length;j++){            
+        if ((onlyString[j].length)<(min.length)){
+            min=onlyString[j]
         }
-       j++ 
+       
     }
-    shortest=tempo
-    return shortest
-}
+    
+    return min
+    }
 
 //Q30
 //Answer
-function smallestOfMixed(array) {
-    var result=[]
-    var i=0
-    while (i<array.length) {
-        if ((typeof array[i])==='number'){
-              result.push(array[i])
+function smallestOfMixed(array){
+    var onlynumbers=[]
+    for(var i=0;i<array.length; i++){
+        if (typeof array[i]==='number'){
+            onlynumbers.push(array[i])
         }
-     i++   
     }
-    var smallest =0
-    var tempo=result[0]
-    var j=1
-    while (j<result.length) {
-        if ((result[j])<(tempo)){
-            tempo=result[j]
+    if ((onlynumbers.length)===0){ return 0}
+    var min=onlynumbers[0]
+    for(var j=1;j<onlynumbers.length;j++){
+        if ((onlynumbers[j])<(min)){
+            min=onlynumbers[j]
         }
-       j++ 
     }
-    smallest=tempo
-    return smallest
-}
-
-
-
-
-
-
-}
+    return min
+    }
